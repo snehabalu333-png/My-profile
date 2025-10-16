@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sneha B - Portfolio</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    /* Reset */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Header style */
+    header {
+      background: #004aad;
+      padding: 15px 40px;
+      border-radius: 12px;
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      color: white;
+    }
+
+    /* Center logo */
+    .logo {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 24px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    /* Navigation */
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      text-decoration: underline;
+    }
+
+    /* Sections */
+    main {
+      flex: 1;
+      padding: 30px;
+      display: none;
+    }
+
+    /* Home */
+    .home {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: #ffe6e6;
+    }
+    .intro h2 {
+      font-size: 28px;
+    }
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 10px 20px;
+      background: #004aad;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .btn:hover {
+      background: #003080;
+    }
+
+    /* Resume */
+    .resume .container {
+      width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .resume header {
+      text-align: center;
+      background: none;
+      color: black;
+      position: static;
+      border-radius: 0;
+      justify-content: center;
+      display: block;
+    }
+    .resume header img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 2px solid #ccc;
+    }
+    .resume header h1 {
+      margin: 10px 0 5px;
+      font-size: 28px;
+    }
+    .resume header p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #666;
+    }
+    .resume section {
+      margin-bottom: 25px;
+    }
+    .resume section h2 {
+      font-size: 20px;
+      color: #004aad;
+      border-bottom: 2px solid #004aad;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+    }
+    .chips span {
+      display: inline-block;
+      background: #eef2ff;
+      padding: 6px 12px;
+      border-radius: 20px;
+      margin: 4px 6px 4px 0;
+      font-size: 14px;
+      border: 1px solid #ccd5ff;
+    }
+
+    /* Bio */
+    .bio .container {
+      width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .bio h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #004aad;
+    }
+    .bio table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    .bio td {
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    .bio td.label {
+      font-weight: bold;
+      width: 30%;
+      background: #ffe6e6;
+    }
+
+    /* Footer */
+    footer {
+      background: #004aad;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      border-radius: 12px 12px 0 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">🌐 My Portfolio</div>
+    <nav>
+      <ul>
+        <li><a href="#" class="nav-link" data-target="home">Home</a></li>
+        <li><a href="#" class="nav-link" data-target="resume">Resume</a></li>
+        <li><a href="#" class="nav-link" data-target="bio">Bio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home -->
+  <main class="home">
+    <section class="intro">
+      <h2>Hello, I’m <span class="highlight">Sneha B</span></h2>
+      <a href="#" class="btn nav-link" data-target="resume">View My Resume</a>
+      <a href="#" class="btn nav-link" data-target="bio">View My Bio-data</a>
+    </section>
+  </main>
+
+  <!-- Resume -->
+  <main class="resume">
+    <div class="container">
+      <header>
+        <img src="WhatsApp Image 2025-09-09 at 7.32.45 PM.jpeg" alt="Profile Photo">
+        <h1>Sneha B</h1>
+        <p>Email: snehabalu333@gmail.com</p>
+        <p>Phone: 9844172409</p>
+      </header>
+
+      <section>
+        <h2>Objective</h2>
+        <p>To secure a challenging position in a reputable organization where I can utilize my skills and grow professionally.</p>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <ul>
+          <li><strong>B.E. in Computer Science</strong> at Vivekananda Engineering and Technology, Puttur (2023–2027), CGPA: 7.4/10</li>
+          <li><strong>PUC</strong> – St. Philomena P U College Darbe (2021–2022)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Skills</h2>
+        <div class="chips">
+          <span>C</span><span>Java</span><span>Python</span><span>HTML</span>
+          <span>CSS</span><span>C++</span><span>SQL</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>Languages</h2>
+        <ul>
+          <li>Kannada – Native</li>
+          <li>English – Professional</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Certificates</h2>
+        <ul>
+          <li>Infosys Springboard (Data Structures, C++, Java)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Interests</h2>
+        <div class="chips">
+          <span>Reading books</span>
+          <span>Traveling</span>
+          <span>Artificial Intelligence</span>
+          <span>Cloud Computing</span>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Bio -->
+  <main class="bio">
+    <div class="container">
+      <h2>Bio-Data</h2>
+      <table>
+        <tr>
+          <td class="label">Name</td>
+          <td>Sneha B</td>
+        </tr>
+        <tr>
+          <td class="label">Date of Birth</td>
+          <td>13-11-2005</td>
+        </tr>
+        <tr>
+          <td class="label">Email</td>
+          <td>snehabalu333@gmail.com</td>
+        </tr>
+        <tr>
+          <td class="label">Phone</td>
+          <td>9844172409</td>
+        </tr>
+        <tr>
+          <td class="label">Address</td>
+          <td>Martalli, Karnataka, India</td>
+        </tr>
+        <tr>
+          <td class="label">Nationality</td>
+          <td>Indian</td>
+        </tr>
+        <tr>
+          <td class="label">Hobbies</td>
+          <td>Reading, Coding, Music</td>
+        </tr>
+      </table>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 My Portfolio | Designed with ❤</p>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    $(document).ready(function(){
+      // Show home by default
+      $(".home").show();
+
+      // Navigation clicks
+      $(".nav-link").click(function(e){
+        e.preventDefault();
+        let target = $(this).data("target");
+        $("main").hide();
+        $("." + target).fadeIn(600);
+
+        // Highlight active link
+        $("nav a").removeClass("active");
+        $(this).addClass("active");
+      });
+
+      // Button click animation
+      $(".btn").click(function(){
+        $(this).fadeOut(200).fadeIn(200);
+      });
+    });
+  </script>
+</body>
+</html>
